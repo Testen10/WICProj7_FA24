@@ -20,11 +20,22 @@
         </ul>
     </nav>
     <!-- Main content of the News page -->
-    <div class="container">
-        <img src="img/news-bg.png" >
-        <div class="topright">Recent News</div>
+    <div id="header">
+        <h1>News</h1>
     </div>
     
+    <script>
+        window.onscroll = function () {scrollFunction()}
+        function scrollFunction() {
+            if(document.documentElement.scrollTop > 50) {
+                document.getElementById("header").style.height = "20vh";
+                document.getElementById("header").style.fontSize = "5.7vh";
+            } else {
+                document.getElementById("header").style.height = "70vh";
+                document.getElementById("header").style.fontSize = "20vh";
+            }
+        }
+    </script>
 
 
 
