@@ -3,7 +3,7 @@ ul,ol{list-style:none}
 a{text-decoration:none;color:#fff;font-size:15px}
 
 main{
-	background-color: #ffffff;
+	background-color: #f0eeeb;
 	margin: 0 auto; 
 	border-bottom: 1px solid #000000;
 	padding: 20px 0 20px 0; 
@@ -44,6 +44,64 @@ nav{
     position: relative; /* Fixed position - sit on top of the page */
     transition: 0.2s;
 }
+
+.content {
+    padding-top: 20vh;
+    color: #2e3c32;
+}
+
+.content h1{
+    font-size: 40px;
+    padding-left:10px;
+    padding-bottom:10px;
+    border-bottom: 2px solid #2e3c32;
+    line-height: 33px;
+    margin-bottom:10px;
+}
+
+.water-card,
+.air-card,
+.energy-card,
+.biodiv-card {
+    margin: auto;
+    width: 95%;
+    height: 50vh;
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+.water-card {
+    background-color: #bbd9ed;
+}
+
+.air-card {
+    background-color: #ded9ca;
+}
+
+.energy-card {
+    background-color: #d0e0cc;
+}
+
+.biodiv-card {
+    background-color: #e3cfc5;
+}
+
+.video {
+    display: inline-block;
+    width: 34vw;
+    height: 40vh;
+    padding: 30px 20px;
+}
+
+.card-text {
+    display: inline-block;
+    width: 30vw;
+    height: 40vh;
+    right: 20px;
+    
+}
+
+a:link {color:#ffffff;}
+a:hover {font-size:150%;}
 
 #footerbar {
     height: 50px; 
