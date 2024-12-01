@@ -146,6 +146,7 @@ nav{
 .block-news p, .block-vegan p, .block-transit p, .block-compost p {
     font-size: 15px;
 }
+
 #footerbar {
     height: 50px; /* 높이를 늘려 명확히 보이게 설정 */
     border-top: 1px solid #000; /* 상단 경계선 */

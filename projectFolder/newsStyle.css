@@ -1,9 +1,9 @@
 *{padding:0;margin:0}
 ul,ol{list-style:none}
-a{text-decoration:none;color:#fff;font-size:15px}
+a{text-decoration:none;color:#fff;font-size:1vw}
 
 main{
-	background-color: #f0eeeb;
+	background-color: #ffffff;
 	margin: 0 auto; 
 	border-bottom: 1px solid #000000;
 	padding: 20px 0 20px 0; 
@@ -14,10 +14,11 @@ nav{
     width: 100%;
     overflow:hidden;
     height:40px;
-    background-color:#2e3c32;
+ 
 }
 #nav1{
     text-align:center;
+    background-color:#2e3c32;
 }
 #nav1>ul{
     display:inline-block
@@ -32,31 +33,92 @@ nav{
     background-image: url("img/news-bg.png");
     background-attachment: fixed;
     background-size: cover;
-    width: 100vw;
-    height: 70vh;
+    width: auto;
+    height: 80vh;
 
     padding-top: 20vh;
     color: floralwhite;
     font-family: Cambria, serif;
     
-    text-align: center; /* Centered text */
-    font-size: 20vh; /* Big font size */
-    position: relative; /* Fixed position - sit on top of the page */
+    text-align: center;
+    font-size: 20vh;
+    position: relative;
     transition: 0.2s;
 }
 
 .content {
-    padding-top: 20vh;
-    color: #2e3c32;
+    color: darkslategrey;
+}
+.content h1 {
+    font-size: 4vw;
+    text-align: center;
 }
 
-.content h1{
-    font-size: 40px;
-    padding-left:10px;
-    padding-bottom:10px;
-    border-bottom: 2px solid #2e3c32;
-    line-height: 33px;
-    margin-bottom:10px;
+.wrapper {
+    padding: 10vh 5vh 10vh 5vh;
+    margin: 0 -5px;
+}
+
+.wrapper:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.column {
+    float: left;
+    width: 25%;
+    padding: 0 10px;
+    box-sizing: border-box;
+}
+
+.card {
+    position: relative;
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+.card-img {
+    border-radius: 10px;
+    display: block;
+    filter: brightness(75%)
+}
+
+.card:hover .card-overlay{
+    height: 100%
+}
+
+.card-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgb(132, 132, 132);
+    overflow: hidden;
+    width: 100%;
+    height: 0;
+    transition: .5s ease;
+    border-radius: 10px;
+}
+
+.card-title {
+    white-space: nowrap;
+    color: white;
+    font-size: 2vw;
+    position: absolute;
+    overflow: hidden;
+    top: 85%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.card-text {
+    color: white;
+    font-size: 2vw;
+    position: absolute;
+    overflow: hidden;
+    padding: 10% 10% 0 10%;
 }
 
 .water-card,
@@ -68,6 +130,9 @@ nav{
     height: 50vh;
     border-radius: 10px;
     box-sizing: border-box;
+    text-align: center;
+    color: white;
+    font-size: 2vw;
 }
 .water-card {
     background-color: #bbd9ed;
@@ -86,22 +151,49 @@ nav{
 }
 
 .video {
-    display: inline-block;
+    position: absolute;
     width: 34vw;
     height: 40vh;
-    padding: 30px 20px;
+    padding: 5vh 2vw ;
 }
 
-.card-text {
-    display: inline-block;
-    width: 30vw;
-    height: 40vh;
-    right: 20px;
-    
+.box-text {
+    position: absolute; 
+    width: 50vw;
+    left: 44%;
+    padding-top: 1%;
+  
 }
 
-a:link {color:#ffffff;}
-a:hover {font-size:150%;}
+.link-container {
+    position: absolute;
+    width: 50vw;
+    left: 43%;
+    padding-top: 40vh;
+
+}
+#box-link {
+    text-align:center;
+
+}
+#box-link>ul {
+    display:inline-block;
+}
+#box-link>ul li {
+    float:left;
+    padding:0 20px;
+    line-height: 40px;
+}
+
+.links {
+    font-size: 1.5vw;
+    font-family: "verdana", sans-serif;
+    text-decoration: underline;
+}
+
+a:hover {font-size: 80%;}
+
+.bigger { font-family:"verdana", sans-serif; font-size:200%; }
 
 #footerbar {
     height: 50px; 
