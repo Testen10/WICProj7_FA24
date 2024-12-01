@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <link rel="stylesheet" href="newsStyle.css">
     <meta charset="UTF-8">
@@ -23,21 +24,57 @@
     <div id="header">
         <h1>News</h1>
     </div>
-    
-    <script>
-        window.onscroll = function () {scrollFunction()}
-        function scrollFunction() {
-            if(document.documentElement.scrollTop > 50) {
-                document.getElementById("header").style.height = "20vh";
-                document.getElementById("header").style.fontSize = "5.7vh";
-            } else {
-                document.getElementById("header").style.height = "70vh";
-                document.getElementById("header").style.fontSize = "20vh";
-            }
-        }
-    </script>
 
-    
+    <div class="wrapper">
+        <div class="column">
+            <div class="card">
+                <img class="card-img" src="img/ocean-pollution.png" alt="Missing Image" style="width:100%">
+                <div class="card-title"> Ocean Pollution </div>
+                <div class="card-overlay">
+                    <div class="card-text">
+                        Explore the health of our water sources including what is polluting them and what people are doing around the world to keep our waters clean
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="column">
+            <div class="card">
+                <img class="card-img" src="img/air-pollution.png" alt="Missing Image" style="width:100%">
+                <div class="card-title"> Air Pollution </div>
+                <div class="card-overlay">
+                    <div class="card-text">
+                        Find out what pollutants are intoxicating the air that humans and other living beings breathe
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="column">
+            <div class="card">
+                <img class="card-img" src="img/energy-use.png" alt="Missing Image" style="width:100%">
+                <div class="card-title"> Energy Use </div>
+                <div class="card-overlay">
+                    <div class="card-text">
+                        Learn about the innovations being made to establish efficient, renewable energy sources that will help reduce pollution and insecurities around the world
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="column">
+            <div class="card">
+                <img class="card-img" src="img/bio-loss.png" alt="Missing Image" style="width:100%">
+                <div class="card-title"> Biodiversity Loss </div>
+                <div class="card-overlay">
+                    <div class="card-text">
+                        Discover why many animal and plants species are or are becoming endangered and how the loss of these species may affect our own lives
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <div class="content">
         <h1>Learn more about these topics</h1>
     </div>
@@ -49,8 +86,20 @@
                     referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
                 </iframe>
             </div>
-            <div class="card-text">
-                <p>links</p>
+            <div class="box-text">
+                <p><span class='bigger'>Water pollution</span></p> is one of the most extensive environmental issue, affecting water sources across the world.
+                    Visit some of the sites below to learn more about the state of our waters and to see what people are doing
+                    to restore and maintain them.
+                </p>
+            </div>
+            <div class="link-container">
+                <nav id="box-link">
+                    <ul>
+                        <li><a href="https://www.bbc.com/news/topics/cnegp3jd4e4t" target="_blank" class="links">BBC</a></li>
+                        <li><a href="https://www.epa.gov/environmental-topics/water-topics" target="_blank" class="links">US EPA</a></li>
+                        <li><a href="https://www.unwater.org/" target="_blank" class="links">UN-Water</a></li>
+                    </ul>
+                </nav>
             </div>
         </div>
         <br>
@@ -62,6 +111,21 @@
                     referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
                 </iframe>
             </div>
+            <div class="box-text">
+                <p><span class='bigger'>Air pollution</span></p> prevails as the biggest threat to the environment, causing damage to both natural habitats
+                    and to human health as well. Cities and organizations around the world are beginning to take initiative to halt and reverse air pollution's
+                    damage. Visit the sites below to check out what's going on today.
+                </p>
+            </div>
+            <div class="link-container">
+                <nav id="box-link">
+                    <ul>
+                        <li><a href="https://www.who.int/health-topics/air-pollution#tab=tab_1" target="_blank" class="links">WHO</a></li>
+                        <li><a href="https://ourworldindata.org/air-pollution" target="_blank" class="links">Our World in Data</a></li>
+                        <li><a href="https://www.cleanairfund.org/news/" target="_blank" class="links">Clean Air Fund</a></li>
+                    </ul>
+                </nav>
+            </div>
         </div>
         <br>
         <div class="energy-card">
@@ -71,6 +135,21 @@
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
                     referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
                 </iframe>
+            </div>
+            <div class="box-text">
+                <p><span class='bigger'>Energy Use</span></p> is an important factor that plays into modern human lives. From cellphones
+                    to factories run by machines, our society relies on energy sources -- mainly fossil fuels which harm the environment.
+                    Click the links below to see what you can do to reduce your carbon footprint.
+                </p>
+            </div>
+            <div class="link-container">
+                <nav id="box-link">
+                    <ul>
+                        <li><a href="https://www.iea.org/topics/global-energy-crisis" target="_blank" class="links">IEA</a></li>
+                        <li><a href="https://www.bbc.com/news/topics/c2041rg5e6gt" target="_blank" class="links">BBC</a></li>
+                        <li><a href="https://www.dw.com/en/energy-crisis/t-63055322" target="_blank" class="links">Deutsche Welle</a></li>
+                    </ul>
+                </nav>
             </div>
         </div>
         <br>
@@ -82,10 +161,39 @@
                     referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
                 </iframe>
             </div>
+            <div class="box-text">
+                <p><span class='bigger'>Biodiversity</span></p> is crucial in maintaining our ecosystems which in turn regulate
+                    many aspects of the environment from food security to carbon dioxide absorbance. See what's happening to biodiversity now
+                    via the links below.
+                </p>
+            </div>
+            <div class="link-container">
+                <nav id="box-link">
+                    <ul>
+                        <li><a href="https://www.bbc.com/news/topics/c9grgwq2krzt" target="_blank" class="links">BBC</a></li>
+                        <li><a href="https://www.conservation.org/blog/biodiversity" target="_blank" class="links">Conservation Intl.</a></li>
+                        <li><a href="https://www.biologicaldiversity.org/news/breaking/" target="_blank" class="links">CBD</a></li>
+                    </ul>
+                </nav>
+            </div>
         </div>
 
 
-        
+
+
+    <script>
+        window.onscroll = function () {scrollFunction()}
+        function scrollFunction() {
+            if(document.documentElement.scrollTop > 50) {
+                document.getElementById("header").style.height = "20vh";
+                document.getElementById("header").style.fontSize = "5.7vh";
+            } else {
+                document.getElementById("header").style.height = "80vh";
+                document.getElementById("header").style.fontSize = "20vh";
+            }
+        }
+    </script>
+
 </body>
 
 <footer>
