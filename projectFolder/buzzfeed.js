@@ -42,6 +42,15 @@ const quizData = [
     },
     // lifestyle questions
     {
+        question: "Do you watch environment-related news often?",
+        answers: [
+            { text: "Yes, and I am aware of its severity.",  score: 2 },
+            { text: "Yes, but I don't really enjoy doing it.", score: 1},
+            { text: "No, I am not interested on it.", score: 0 }
+        ],
+        group: "lifestyle"
+    },
+    {
         question: "What is your main transportation?",
         answers: [
             { text: "On foot / bicycle",  score: 2 },
@@ -68,21 +77,13 @@ const quizData = [
             { text: "No, I just throw them away all in once.", score: 0 }
         ],
         group: "lifestyle"
-    },
-    {
-        question: "Do you recycle?",
-        answers: [
-            { text: "Yes, and I known how to do them well!",  score: 2 },
-            { text: "Yes, but I don't really know how to.", score: 1},
-            { text: "No, I just throw them away all in once.", score: 0 }
-        ],
-        group: "lifestyle"
     }
 ];
 
 // Select the HTML elements
 const questionContainer = document.querySelector(".questions");
 const resultsContainer = document.querySelector(".results");
+const headerContainer = document.querySelector(".quiz-header");
 const submitButton = document.querySelector("#submit");
 const restartButton = document.querySelector("#restart");
 
@@ -90,24 +91,26 @@ const restartButton = document.querySelector("#restart");
 const responses = [
     // 0-2 correct for basic knowledge & 0-3 score for lifestyle
     `Hmm... looks like you aren't quite living a eco-friendly life yet...
-        We highly suggest you to go through our website and seek ways to make your life more greener!`, 
+        <br>We highly suggest you to go through our website and seek ways to make your life greener!`, 
     
     // 0-2 correct for basic knowledge & 4-6 score for lifestyle
     `Interesting... You are living a some-kind-of eco-friendly life in spite of lacking knowledge.
-        How about going through our website for more information?`,
+        <br>How about going through our website for more information?`,
     
     // 0-2 correct for basic knowledge & 7-9 score for lifestyle
      `VERY INTERSTING!!! You are living a eco-friendly life in spite of lacking knowledge.
-        You could browse through our website to figure out how your actions are making a better world for our future generation :P`,
+        <br>You could browse through our website to figure out how your actions are making a better world for our future generation :P`,
     
 
     // 3-4 correct for basic knowledge & 0-3 score for lifestyle
     `You have plenty amount of knowledge about eco-friendly life, and now it's time to actually take an action!
-        Maybe getting to know about the impact of your action may work as the driving force? (Our website would be helpful :p)`, 
+        <br>Maybe getting to know about the impact of your action may work as the driving force? (Our website would be helpful :p)`, 
     // 3-4 correct for basic knowledge & 4-6 score for lifestyle
-    `temp1`, 
+    `Amazing! You are really close to the goal of becoming eco-friendly!
+        <br>Figure out ways to make your lifestyle become greener by our website ;D`, 
     // 3-4 correct for basic knowledge & 7-9 score for lifestyle
-    `temp2`, 
+    `Congrats !! We recognize you as the best environmental lover!!
+       <br>We hope you maintain this eco-friendly lifestyle. It would be so happy if our website would help you to do so!`, 
 ];
 
 // Function to display all questions and answer options
@@ -162,11 +165,14 @@ function handleSubmit() {
     // Hide submit button and questions container
     submitButton.style.display = "none";
     questionContainer.style.display = "none";
+    headerContainer.style.display = "none";
 
     // Display group-specific scores
     resultsContainer.innerHTML = `
-        <p>Basic Knowledge Score: ${groupScores.basicKnowledge}</p>
-        <p>Lifestyle Score: ${groupScores.lifestyle}</p>
+        <div class="score">
+            <p>Basic Knowledge Score: ${groupScores.basicKnowledge}</p>
+            <p>Lifestyle Score: ${groupScores.lifestyle}</p>
+        </div>
     `;
 
     // Determine the comment based on scores
@@ -175,21 +181,19 @@ function handleSubmit() {
         if (groupScores.lifestyle > 6) comment = responses[5];
         else if (groupScores.lifestyle > 3) comment = responses[4];
         else comment = responses[3];
-        // if (groupScores.lifestyle > 6) comment = "low knowledge green life";
-        // else if (groupScores.lifestyle > 3) comment = "low knowledge somewhat green life";
-        // else comment = "low knowledge notgreen life";
     }
     else {
-        // if (groupScores.lifestyle > 6) comment = responses[2];
-        // else if (groupScores.lifestyle > 3) comment = responses[1];
-        // else comment = responses[0];
-        if (groupScores.lifestyle > 6) comment = "low knowledge green life";
-        else if (groupScores.lifestyle > 3) comment = "low knowledge somewhat green life";
-        else comment = "low knowledge notgreen life";
+        if (groupScores.lifestyle > 6) comment = responses[2];
+        else if (groupScores.lifestyle > 3) comment = responses[1];
+        else comment = responses[0];
     }
 
     // Append the comment to the results container
-    resultsContainer.innerHTML += `<p>${comment}</p>`;
+    resultsContainer.innerHTML += `
+        <div class="comment">
+            <p>${comment}</p>
+        </div>
+            `;
 
     // Display results and comments
     resultsContainer.style.display = "block";

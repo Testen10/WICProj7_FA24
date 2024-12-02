@@ -81,14 +81,6 @@ nav{
     font-size: 30px;
     margin-bottom:10px;
 }
-/* about this website section */
-.info-text{
-    margin:10px 10px 50px 10px;
-}
-.info-text p{
-    font-size: 15px;
-    line-height : 1.5em;
-}
 
 a:link {color:#ffffff;}
 a:hover {
@@ -104,6 +96,16 @@ a:hover {
     background-color: #f9f9f9;
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.quiz-header{
+    color: #ffffff;
+    font-family: "Last Ninja", Impact, fantasy; 
+    font-style: oblique;
+    font-size: 30px;
+    padding: 10px;
+    border-radius: 10px;
+    
+    background-color: #5e8d66;
 }
 
 .questions {
@@ -157,7 +159,7 @@ label {
   }
   
   [type="radio"]:checked {
-    border: 0.4em solid #9f684b;
+    border: 0.4em solid #c2d6c5;
   }
   
     [type="radio"]:checked + span {
@@ -176,7 +178,7 @@ label {
   
   [type="radio"]:focus-visible {
     outline-offset: max(2px, 0.1em);
-    outline: max(2px, 0.1em) dotted #9f684b;
+    outline: max(2px, 0.1em) dotted #c2d6c5;
   }
   
   [type="radio"]:hover {
@@ -271,7 +273,7 @@ footer {
     p{margin-left: 30px;}
 }
 
-#submit {
+#submit, #restart {
     display: block;
     margin: 0 auto;
     padding: 10px 20px;
@@ -282,35 +284,38 @@ footer {
     border-radius: 5px;
     transition: background-color 0.3s;
 }
-#submit:enabled{
+#submit:enabled, #restart:enabled{
     background-color: #506758;
     cursor: pointer;
 }
 
-#submit:enabled + hover {
+#submit:enabled + hover , #restart {
     background-color: #3c4e46;
     size:120%;
     transition: 0.2s;
 }
 
 .results {
-    text-align: center;
+    text-align: left;
     margin-top: 20px;
 }
 
-.results button {
-    padding: 10px 20px;
-    font-size: 16px;
-    background-color: #506758;
-    color: #ffffff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s;
+.score{
+    color: #5e8d66;
+    font-family: "Last Ninja", Impact, fantasy; 
+    font-style: oblique;
+    text-decoration: underline;   
+    font-size: 24px;
+}
+.score p{
+    padding:0.5rem;
 }
 
-.results button:hover {
-    background-color: #3c4e46;
+.comment{
+    font-size: 18px;
+    padding-top:1rem;
+    padding-bottom:1rem;
+    line-height: 150%;
 }
 
 
