@@ -1,3 +1,7 @@
+<<<<<<< Updated upstream
+=======
+
+>>>>>>> Stashed changes
 @import "compass/css3";
 *{padding:0;margin:0}
 ul,ol{list-style:none}
@@ -332,4 +336,8 @@ footer {
     background-color: #2e3c32; /* 배경색 추가 */
 
     p{margin-left: 30px;}
+<<<<<<< Updated upstream
 }
+=======
+}
+>>>>>>> Stashed changes
