@@ -1,0 +1,104 @@
+*{padding:0;margin:0}
+ul,ol{list-style:none}
+a{text-decoration:none;color:#fff;font-size:15px}
+
+main{
+	background-color: #ffffff;
+	margin: 0 auto; /* auto 알아서 중앙으로 맞춰줌 */
+	border-bottom: 1px solid #000000;
+	padding: 20px 0 20px 0; 
+	width: 100%;
+	height: 100%;
+}
+/* for top, box above the nav bar */
+.title-background{
+    background-color: #506758;
+    background-image: url('img/title-bg.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-blend-mode: multiply;
+
+    padding-top:20px;
+    padding-bottom: 40px;
+    padding-left:50px;
+    width: 100%;
+
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.title-background h1{
+    color:#ffffff;
+    font-size: 50px;
+    display: inline;
+}
+.title-background p{
+    padding-left: 30px;
+    margin-bottom: 20px;
+    font-size: 15px;
+    color:#ffffff;
+    display: inline-flex;
+}
+/* navigator */
+nav{
+    width: 100%;
+    overflow:hidden;
+    height:40px;
+    background-color:#2e3c32;
+}
+#nav1{
+    text-align:center;
+}
+#nav1>ul{
+    display:inline-block
+}
+#nav1>ul li{
+    float:left;
+    padding:0 60px;
+    line-height:40px
+}
+
+/*body*/
+body {
+    background-color: #d8f3dc; /* Light green */
+    color: #333; /* Default text color */
+    font-family: 'Times New Roman', Times, serif, sans-serif;
+    line-height: 1.6; /* Improves paragraph readability */
+    margin: 0;
+    padding: 0;
+}
+#content {
+    max-width: 800px; /* Limits the width of the content area */
+    margin: 0 auto; /* Centers the content */
+    padding: 1em; /* Adds padding inside the container */
+}
+h1, h2, h3 {
+    color: #2d6a4f; /* Dark green */
+    font-family: "Times New Roman", Times, serif; /* Keep headers in Times New Roman */
+}
+p {
+    margin: 1em 0; /* Adds spacing between paragraphs */
+    text-align: justify; /* Aligns text for better readability */
+}
+
+#footerbar {
+    height: 50px; /* 높이를 늘려 명확히 보이게 설정 */
+    border-top: 1px solid #000; /* 상단 경계선 */
+    border-bottom: 1px solid #333; /* 하단 경계선 */
+    background-color: #2e3c32; /* 명확한 배경색 추가 */
+    margin: 40px 0; /* 위아래 간격 */
+    position: absolute; /* 기본 위치 */
+}
+
+footer {
+    display: block;
+    text-align: left; /* 가운데 정렬 */
+    color: #ffffff; /* 텍스트 색상 */
+    font-size: 14px;
+    padding: 15px 0;
+    background-color: #2e3c32; /* 배경색 추가 */
+
+    p{margin-left: 30px;}
+}
