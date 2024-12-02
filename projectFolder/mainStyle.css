@@ -1,6 +1,6 @@
 *{padding:0;margin:0}
 ul,ol{list-style:none}
-a{text-decoration:none;color:#fff;font-size:15px}
+a{text-decoration:none;color:#fff;font-size:15px;font-size:100%;transition: 0.2s;}
 
 main{
 	background-color: #ffffff;
@@ -11,13 +11,16 @@ main{
 	height: 100%;
 }
 /* for top, box above the nav bar */
-.title-background{
+#title-background{
     background-color: #506758;
     background-image: url('img/title-bg.jpg');
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
     background-blend-mode: multiply;
+
+    position: relative; /* Fixed position - sit on top of the page */
+    transition: 0.2s;
 
     padding-top:20px;
     padding-bottom: 40px;
@@ -29,12 +32,12 @@ main{
     align-items: center;
     justify-content: space-between;
 }
-.title-background h1{
+#title-background h1{
     color:#ffffff;
     font-size: 50px;
     display: inline;
 }
-.title-background p{
+#title-background p{
     padding-left: 30px;
     margin-bottom: 20px;
     font-size: 15px;
@@ -59,7 +62,6 @@ nav{
     padding:0 60px;
     line-height:40px
 }
-
 /* main page */
 .main-content{
     margin: 30px 30px 30px 30px;
@@ -146,6 +148,12 @@ nav{
 .block-news p, .block-vegan p, .block-transit p, .block-compost p {
     font-size: 15px;
 }
+a:link {color:#ffffff;}
+a:hover {
+    font-size:120%;
+    transition: 0.4s;
+}
+
 #footerbar {
     height: 50px; /* 높이를 늘려 명확히 보이게 설정 */
     border-top: 1px solid #000; /* 상단 경계선 */
